@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ano Bissexto</title>
+</head>
+<body>
+<h2>Verificar se um Ano é Bissexto</h2>
+<label for="anoInput">Digite o ano:</label>
+<input type="text" id="anoInput">
+<button onclick="verificarAno()">Verificar</button>
+<p id="resultado"></p>
+
+<script>
+function verificarAno() {
+  var ano = document.getElementById("anoInput").value;
+  var resultado = document.getElementById("resultado");
+  
+  // Verifica se o ano é divisível por 4 e não por 100, ou se é divisível por 400
+  if ((ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0)) {
+    resultado.innerText = ano + " é um ano bissexto.";
+  } else {
+    resultado.innerText = ano + " não é um ano bissexto.";
+  }
+}
+</script>
+</body>
+</html
